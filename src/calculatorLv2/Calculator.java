@@ -3,7 +3,7 @@ package calculatorLv2;
 import java.util.ArrayList;
 
 public class Calculator {
-    private ArrayList<Double> arrList = new ArrayList<>();
+    private final ArrayList<Double> arrList = new ArrayList<>();
 
 
     public double calculate(int firNum, int secNum, char sign){
@@ -15,9 +15,10 @@ public class Calculator {
                 break;
             case '-':
                 result = firNum - secNum;
+                setArrList(result);
                 break;
             case '*':
-                result = firNum - secNum;
+                result = firNum * secNum;
                 setArrList(result);
                 break;
             case '/':
@@ -34,6 +35,14 @@ public class Calculator {
 
     private void setArrList(double i) {
         arrList.add(i);
+    }
+
+    public ArrayList<Double> getArrList() {
+        return arrList;
+    }
+
+    public void deleteFirstArr () {
+        arrList.remove(0);
     }
 }
 
