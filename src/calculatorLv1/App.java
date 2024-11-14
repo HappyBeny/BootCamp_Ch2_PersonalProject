@@ -14,34 +14,40 @@ public class App {
             System.out.print("두 번째 정수 : ");
             int secNum = sc.nextInt();
             sc.nextLine();
+            if (firNum < 0 || secNum < 0){
+                System.out.println("[[error]]잘못된 값을 입력하셨습니다. 0 이상의 정수를 입력해주세요");
+                System.out.println();
+                continue;
+            }
 
             System.out.print("연산기호를 입력해주세요( +, -, *, / ) : ");
-            String sign = sc.nextLine();
+            char sign = sc.next().charAt(0);
+            sc.nextLine();
             System.out.println();
 
             switch (sign) {
-                case ("+"):
+                case ('+'):
                     System.out.println("결과 : " + (firNum+secNum));
                     System.out.println();
                     break;
-                case ("-"):
+                case ('-'):
                     System.out.println("결과 : " + (firNum-secNum));
                     System.out.println();
                     break;
-                case ("*"):
+                case ('*'):
                     System.out.println("결과 : " + (firNum*secNum));
                     System.out.println();
                     break;
-                case ("/"):
+                case ('/'):
                     if (secNum == 0){
-                        System.out.println("숫자를 0으로 나누는 것은 불가능합니다. 다시 입력해주세요");
+                        System.out.println("[[error]]숫자를 0으로 나누는 것은 불가능합니다. 다시 입력해주세요");
                         System.out.println();
                         continue;
                     } else {
                         System.out.println("결과 : " + ((double) firNum/secNum));
                     }
                 default:
-                    System.out.println("잘못 입력하셨습니다. 다시 확인해주세요");
+                    System.out.println("[[error]]잘못 입력하셨습니다. 다시 확인해주세요");
                     System.out.println();
                     break;
             }
