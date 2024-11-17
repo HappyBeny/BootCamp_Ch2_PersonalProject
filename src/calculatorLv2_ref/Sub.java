@@ -1,5 +1,9 @@
 package calculatorLv2_ref;
 
-public class Sub extends Operator{
+public class Sub extends OperationManager {
 
+    @Override
+    public double calculate(int num1, int num2) {
+        return num1 - num2;
+    }
 }
