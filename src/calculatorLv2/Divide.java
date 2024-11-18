@@ -1,4 +1,4 @@
-package calculatorLv2_ref;
+package calculatorLv2;
 
 public class Divide extends OperationManager {
 
