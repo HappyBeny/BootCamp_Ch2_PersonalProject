@@ -84,12 +84,12 @@ public class Calculator {
             }
 
         } catch (Exception e){
-            check(e);
+            Excatch(e);
         }
 
     }
 
-    public void check(Exception e){
+    public void Excatch(Exception e){
         checker.check(e);
     }
 
