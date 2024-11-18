@@ -3,10 +3,10 @@ package calculatorLv2;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Checker {
+public class Catcher {
     Scanner sc = new Scanner(System.in);
 
-    public void check(Exception e) {
+    public void exCatch(Exception e) {
         if (e instanceof ArithmeticException){
             System.out.println("[[error]] 숫자를 0으로 나누는 것은 불가능합니다. 다시 시도해주세요.");
             System.out.println();

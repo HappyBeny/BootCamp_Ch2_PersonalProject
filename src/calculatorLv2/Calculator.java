@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Calculator {
     private OperationManager opManager;
-    private final Checker checker = new Checker();
+    private final Catcher catcher = new Catcher();
     private final HistoryManager resultSavor = new HistoryManager();
     Scanner sc = new Scanner(System.in);
 
@@ -84,13 +84,13 @@ public class Calculator {
             }
 
         } catch (Exception e){
-            exCatch(e);
+            send(e);
         }
 
     }
 
-    public void exCatch(Exception e){
-        checker.check(e);
+    public void send(Exception e){
+        catcher.exCatch(e);
     }
 
     public void save(String a){
