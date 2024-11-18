@@ -40,27 +40,27 @@
 - Calculator 클래스
   - 역할 : '계산기'의 역할을 하는 클래스.
     - 필드값 
-        >> 연산 기능을 수행할 OperationManager 클래스
-        >> 예외 처리를 담당하는 Catcher 클래스
-        >> 연산 기록 관리를 담당하는 HistoryManager 클래스
-        >> 사용자의 응답을 받는 Scanner 클래스
+      - 연산 기능을 수행할 OperationManager 클래스
+      - 예외 처리를 담당하는 Catcher 클래스
+      - 연산 기록 관리를 담당하는 HistoryManager 클래스
+      - 사용자의 응답을 받는 Scanner 클래스
     - 메서드
-        >> start 메서드 : 계산기 시작. 원하는 작업 입력받는 메서드
-        >> operating 메서드 : 연산 진행하는 메서드.
-            1) 정수 - 연산자 - 정수 를 차례로 입력받는다
-            2) 입력받은 연산자에 따라 알맞은 OperationManager를 생성한다.
-            3) 올바른 값을 입력하면 연산을 진행하고, 연산 결과를 save 메서드에 전달한다.
-            4) 연산 결과를 출력해서 보여준다.
-            5) 연산 과정에서 예외 발생 시 try&catch문을 통해 send 메서드에 전달한다.
-        >> send 메서드
-            1) 계산기 사용 중 발생한 예외를 Catcher 클래스의 exCatchk메서드에게 전달.
-        >> save 메서드
-            1) 전달받은 문자열(연산 결과)를 HistoryManager 클래스의 setList 메서드에게 전달.
-        >> delete 메서드
-            1) HistoryManager 클래스의 delete 메서드 호출
-            2) 메서드 실행 완료 이후 기록 삭제 메세지 출력
-        >> getList 메서드
-            1) HistoryManager 클래스의 getList 메서드 호출
+      - start 메서드 : 계산기 시작. 원하는 작업 입력받는 메서드
+      - operating 메서드 : 연산 진행하는 메서드.
+        1) 정수 - 연산자 - 정수 를 차례로 입력받는다
+        2) 입력받은 연산자에 따라 알맞은 OperationManager를 생성한다.
+        3) 올바른 값을 입력하면 연산을 진행하고, 연산 결과를 save 메서드에 전달한다.
+        4) 연산 결과를 출력해서 보여준다.
+        5) 연산 과정에서 예외 발생 시 try&catch문을 통해 send 메서드에 전달한다.
+      - send 메서드
+        1) 계산기 사용 중 발생한 예외를 Catcher 클래스의 exCatchk메서드에게 전달.
+      - save 메서드
+        1) 전달받은 문자열(연산 결과)를 HistoryManager 클래스의 setList 메서드에게 전달.
+      - delete 메서드
+        1) HistoryManager 클래스의 delete 메서드 호출
+        2) 메서드 실행 완료 이후 기록 삭제 메세지 출력
+      - getList 메서드
+        1) HistoryManager 클래스의 getList 메서드 호출
 <br>
 
 ### 3. OperationManager 클래스
