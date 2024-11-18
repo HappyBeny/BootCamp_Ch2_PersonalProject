@@ -6,12 +6,14 @@ public class HistoryManager {
     private ArrayList list = new ArrayList();
 
 
-    public void setList(double a) {
+    public void setList(String a) {
         list.add(a);
     }
 
     public void getList() {
-        System.out.println(list);
+        for (int i = 0; i < list.size(); i++){
+            System.out.println((i+1) + " : " + list.get(i));
+        }
     }
 
     public void delete() {

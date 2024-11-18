@@ -73,8 +73,9 @@ public class Calculator {
 
             if (sign == '+' || sign == '-' || sign == '*' || sign == '/') {
                 double result = opManager.calculate(num1, num2);
-                save(result);
-                System.out.println("결과 : " + num1 + " " + sign + " " + num2 + " = " + result);
+                String resultStr = num1 + " " + sign + " " + num2 + " = " + result;
+                save(resultStr);
+                System.out.println("결과 : " + resultStr);
                 System.out.println();
             }
 
@@ -88,7 +89,7 @@ public class Calculator {
         checker.check(e);
     }
 
-    public void save(double a){
+    public void save(String a){
         resultSavor.setList(a);
     }
 
