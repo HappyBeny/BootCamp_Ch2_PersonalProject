@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Calculator {
     private OperationManager opManager;
-    private Checker checker = new Checker();
+    private final Checker checker = new Checker();
     private final HistoryManager resultSavor = new HistoryManager();
     Scanner sc = new Scanner(System.in);
 
