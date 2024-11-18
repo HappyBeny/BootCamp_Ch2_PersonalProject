@@ -55,6 +55,7 @@ public class App {
             System.out.print("더 계산하시겠습니까? (exit 입력 시 종료, 이외의 응답 입력 시 계속 진행) : ");
             String answer = sc.nextLine();
             if (answer.equalsIgnoreCase("exit")){
+                System.out.println("계산기를 종료합니다.");
                 break;
             }
             System.out.println();
