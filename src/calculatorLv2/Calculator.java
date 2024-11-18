@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Calculator {
     private OperationManager opManager;
     private final Catcher catcher = new Catcher();
-    private final HistoryManager resultSavor = new HistoryManager();
+    private final HistoryManager historyManager = new HistoryManager();
     Scanner sc = new Scanner(System.in);
 
     public void start() {
@@ -94,17 +94,17 @@ public class Calculator {
     }
 
     public void save(String a){
-        resultSavor.setList(a);
+        historyManager.setList(a);
     }
 
     private void delete() {
-        resultSavor.delete();
+        historyManager.delete();
         System.out.println("가장 오래된 기록이 1개 삭제되었습니다.");
         System.out.println();
     }
 
     private void getList() {
-        resultSavor.getList();
+        historyManager.getList();
         System.out.println();
     }
 }

@@ -1,10 +1,8 @@
 package calculatorLv2;
 
 import java.util.InputMismatchException;
-import java.util.Scanner;
 
 public class Catcher {
-    Scanner sc = new Scanner(System.in);
 
     public void exCatch(Exception e) {
         if (e instanceof ArithmeticException){
