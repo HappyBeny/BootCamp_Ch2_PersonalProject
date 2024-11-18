@@ -2,7 +2,6 @@
 ## 2️⃣ 구현한 기능
 ## 3️⃣ 클래스/메서드 설명
 ## 4️⃣ 기술 스택
-## 5️⃣ 사용 방법
 <br><br>
 
 
@@ -98,6 +97,3 @@
 - IDE: IntelliJ IDEA
 - Framework: Java Collections Framework
 <br><br>
-
-## 5️⃣ 사용 방법
-### - 
