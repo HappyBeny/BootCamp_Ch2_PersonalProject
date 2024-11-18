@@ -63,34 +63,34 @@
         1) HistoryManager 클래스의 getList 메서드 호출
 <br>
 
-### 3. OperationManager 클래스
-    - 역할 : 계산기에서 '연산'을 담당하는 추상클래스
-        1) 특정 연산이 필요할 때 동적으로 해당 객체를 호출/할당하는 방식으로 다형성 실현
-    - 메서드 : int값 2개를 입력받고 double 타입으로 반환하는 calculate 추상 메서드
+- OperationManager 클래스
+  - 역할 : 계산기에서 '연산'을 담당하는 추상클래스
+    - 특정 연산이 필요할 때 동적으로 해당 객체를 호출/할당하는 방식으로 다형성 실현
+  - 메서드 : int값 2개를 입력받고 double 타입으로 반환하는 calculate 추상 메서드
 <br>
 
-### 4. Add, Sub, Multiply, Divide 클래스
-    - 역할 : OperationManager 클래스를 상속받아 calculate 메서드를 구현하는, 각 연산에 필요한 객체 클래스
-    - 메서드
-        >> int 값 2개를 입력받아서 각각 덧셈, 뺄셈, 곱셈, 나눗셈 연산을 진행하는 calculate 메서드 구현
+- Add, Sub, Multiply, Divide 클래스
+  - 역할 : OperationManager 클래스를 상속받아 calculate 메서드를 구현하는, 각 연산에 필요한 객체 클래스
+  - 메서드
+    - int 값 2개를 입력받아서 각각 덧셈, 뺄셈, 곱셈, 나눗셈 연산을 진행하는 calculate 메서드 구현
 <br>
 
-### 5. Catcher 클래스
-    - 역할 : 계산기 실행 과정에서 발생하는 예외를 처리하는 예외처리 담당 클래스
-    - 메서드 : 예외를 넘겨받아서 처리하는 exCatch 메서드
-        >> 숫자를 0으로 나누려고 시도할때 발생하는 ArithmeticException 예외 처리
-        >> 숫자 대신 문자 타입을 입력하려고 할 때 발생하는 InputMismatchException 예외 처리
-        >> int값 대신 double값을 입력하려고 할 때 발생하는 NumberFormatException 예외 처리
-        >> 다른 예외가 발생할 경우 예외 메세지를 확인하기 위한 에러메세지 출력
+- Catcher 클래스
+  - 역할 : 계산기 실행 과정에서 발생하는 예외를 처리하는 예외처리 담당 클래스
+  - 메서드 : 예외를 넘겨받아서 처리하는 exCatch 메서드
+    - 숫자를 0으로 나누려고 시도할때 발생하는 ArithmeticException 예외 처리
+    - 숫자 대신 문자 타입을 입력하려고 할 때 발생하는 InputMismatchException 예외 처리
+    - int값 대신 double값을 입력하려고 할 때 발생하는 NumberFormatException 예외 처리
+    - 다른 예외가 발생할 경우 예외 메세지를 확인하기 위한 에러메세지 출력
 <br>
 
-### 6. HistoryManager 클래스
-    - 역할 : 연산 과정 진행 후 결과를 저장/출력/삭제하는 기록 저장 클래스
-    - 필드값 : 문자열을 담아둘, 동적으로 길이 확장이 가능한 ArrayList 클래스
-    - 메서드
-        1) 문자열을 입력받아서 ArrayList에 추가하는 setList 메서드
-        2) ArrayList에 담겨진 문자열들을 한 줄에 하나씩 출력하는 getList 메서드
-        3) ArrayList의 첫 번째 값을 삭제하는 delete메서드
+- HistoryManager 클래스
+  - 역할 : 연산 과정 진행 후 결과를 저장/출력/삭제하는 기록 저장 클래스
+  - 필드값 : 문자열을 담아둘, 동적으로 길이 확장이 가능한 ArrayList 클래스
+  - 메서드
+    - 문자열을 입력받아서 ArrayList에 추가하는 setList 메서드
+    - ArrayList에 담겨진 문자열들을 한 줄에 하나씩 출력하는 getList 메서드
+    - ArrayList의 첫 번째 값을 삭제하는 delete메서드
 <br><br>     
 
 ## 4️⃣기술 스택
