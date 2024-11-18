@@ -40,7 +40,7 @@
 - Calculator 클래스
   - 역할 : '계산기'의 역할을 하는 클래스.
     - 필드값 
-      - 연산 기능을 수행할 OperationManager 클래스
+        - 연산 기능을 수행할 OperationManager 클래스
       - 예외 처리를 담당하는 Catcher 클래스
       - 연산 기록 관리를 담당하는 HistoryManager 클래스
       - 사용자의 응답을 받는 Scanner 클래스
