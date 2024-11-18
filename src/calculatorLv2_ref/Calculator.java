@@ -35,15 +35,16 @@ public class Calculator {
     public void operating(){
         try {
             System.out.println("계산을 시작합니다. 정수 - 연산자 - 정수를 순서대로 입력해주세요");
-            System.out.print("첫 번째 정수를 입력해주세요(0 이상의 정수를 입력해주세요) : ");
-            int num1 = sc.nextInt();
             sc.nextLine();
+            System.out.print("첫 번째 정수를 입력해주세요(0 이상의 정수를 입력해주세요) : ");
+            String input = sc.nextLine();
+            int num1 = Integer.parseInt(input);
             System.out.print("연산자를 입력해주세요( +, -, *, / ) : ");
             char sign = sc.next().charAt(0);
             sc.nextLine();
             System.out.print("두 번째 정수를 입력해주세요(0 이상의 정수를 입력해주세요) : ");
-            int num2 = sc.nextInt();
-            sc.nextLine();
+            input = sc.nextLine();
+            int num2 = Integer.parseInt(input);
             System.out.println();
 
             if (num1 < 0 || num2 < 0){
@@ -73,6 +74,9 @@ public class Calculator {
 
             if (sign == '+' || sign == '-' || sign == '*' || sign == '/') {
                 double result = opManager.calculate(num1, num2);
+                if (result == Double.POSITIVE_INFINITY){
+                    throw new ArithmeticException();
+                }
                 String resultStr = num1 + " " + sign + " " + num2 + " = " + result;
                 save(resultStr);
                 System.out.println("결과 : " + resultStr);

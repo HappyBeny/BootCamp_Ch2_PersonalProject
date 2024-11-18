@@ -13,7 +13,10 @@ public class Checker {
         } else if (e instanceof InputMismatchException) {
             System.out.println("[[error]] 올바른 숫자를 입력해주세요. '0 이상의 정수'입니다.");
             System.out.println();
-        }else {
+        } else if (e instanceof NumberFormatException) {
+            System.out.println("[[error]] 잘못 입력하셨습니다. 정수를 입력해주시기 바랍니다.");
+            System.out.println();
+        } else {
             System.out.println(e);
         }
     }
